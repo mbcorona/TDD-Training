@@ -12,9 +12,14 @@ namespace CSharp.Training
         /// </summary>
         /// <param name="number">Number to compute</param>
         /// <returns>Computed result</returns>
-        public string Compute(int number)
+        public string Compute(int n)
         {
-            throw new NotImplementedException("The trainee should implement this code");
+            string res = "";
+            if (n % 3 == 0)
+                res = "Fizz";
+            if (n % 5 == 0)
+                res += "Buzz";
+            return res.Equals("") ? n.ToString() : res;
         }
     }
 }
